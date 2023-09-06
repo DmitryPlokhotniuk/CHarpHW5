@@ -2,10 +2,7 @@
 0, 7, 8, -2, -2 -> 2
 1, -7, 567, 89, 223-> 3 */
 
-
-
-
-Console.WriteLine("Сколько всего чисел вы хотите ввести");
+/* Console.WriteLine("Сколько всего чисел вы хотите ввести");
 int m = Convert.ToInt32(Console.ReadLine());
 int[] arrayNumbers = new int[m];
 
@@ -30,8 +27,23 @@ void CheckArray (int[] arrayNumbers)
     Console.WriteLine($"Количество чисел > 0 = {count}");
 }
 
-
-
-
-
 CheckArray(FillArray(arrayNumbers, m));
+ */
+
+
+Console.WriteLine("Введите числа через ,");
+string[] numbersWords = Console.ReadLine().Split(",");
+
+void CountNumbers (string[] numbersWords)
+{
+    int tmp = 0;
+    int count = 0;
+    for (int i = 0; i < numbersWords.Length; i++)
+    {
+        tmp = Convert.ToInt32(numbersWords[i]);
+        if (tmp > 0) count++;
+    }
+    Console.WriteLine($"Количество чисел > 0 = {count}");
+}
+
+CountNumbers(numbersWords);
