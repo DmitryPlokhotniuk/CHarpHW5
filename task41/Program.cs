@@ -20,10 +20,18 @@ int[] FillArray (int[] arrayNumbers, int m)
     return arrayNumbers;
 }
 
+void CheckArray (int[] arrayNumbers)
+{
+    int count = 0;
+    for (int i = 0; i < arrayNumbers.Length; i++)
+    {
+        if (arrayNumbers[i] > 0) count++;
+    }
+    Console.WriteLine($"Количество чисел > 0 = {count}");
+}
 
 
 
 
 
-
-FillArray(arrayNumbers, m);
+CheckArray(FillArray(arrayNumbers, m));
